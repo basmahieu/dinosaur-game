@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body {
+  background: #171920;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 32pt;
+  color: #2362ee;
+  text-align: center;
+  padding: 56px;
+}
+
+.game {
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  background-image: linear-gradient(
+    to right bottom,
+    #e37bf7,
+    #ce71f6,
+    #b668f5,
+    #9b60f5,
+    #7b59f4
+  );
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#dino {
+  height: 50px;
+  width: 50px;
+  background-image: url(img/dino.svg);
+  background-size: 50px 50px;
+
+  position: relative;
+  top: 150px;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+
+  30% {
+    top: 130px;
+  }
+
+  50% {
+    top: 80px;
+  }
+
+  80% {
+    top: 130px;
+  }
+
+  100% {
+    top: 150px;
+  }
+}
