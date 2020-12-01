@@ -3,6 +3,8 @@ const dino = document.querySelector('#dino');
 const cactus = document.querySelector('#cactus');
 
 const buttonStart = document.querySelector('#start');
+const buttonRestart = document.querySelector('#restart');
+
 const initialScore = document.querySelector('.initial-score');
 const gameOver = document.querySelector('#game-over');
 const gameOverLayer = document.querySelector('.game');
@@ -13,17 +15,29 @@ const audio = document.querySelector('#audio');
 const audioLose = document.querySelector('#audioLose');
 
 
-
-
 // Start Button
 buttonStart.onclick = function (){
-    console.log("test");
     initialScore.remove();
     cactus.classList.add('cactus-move');
     window.setInterval(stopWatch, 100);
-
-
+    buttonStart.remove();
+    
 };
+
+// Restart Button
+buttonRestart.onclick = function (){
+    location.reload();
+};
+
+
+// Jump with space
+document.addEventListener('keydown', function(e) {
+    if(e.keyCode == 32){
+        jump();
+    }
+    
+});
+
 
 // Dino Jump
 function jump() {
@@ -38,7 +52,7 @@ function jump() {
     }
 }   
 
-
+// Check collision
 let isAlive = setInterval(() => {
     // get current dino Y position
     let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
@@ -60,12 +74,7 @@ let isAlive = setInterval(() => {
 }, 10);
 
 
-document.addEventListener('keydown', function(e) {
-    if(e.keyCode == 32){
-        jump();
-    }
-    
-});
+
 
 
 // Score
