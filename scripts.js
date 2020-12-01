@@ -1,8 +1,31 @@
 const dino = document.querySelector('#dino');
-const audio = document.querySelector('#audio');
+
 const cactus = document.querySelector('#cactus');
 
+const buttonStart = document.querySelector('#start');
+const initialScore = document.querySelector('.initial-score');
+const gameOver = document.querySelector('#game-over');
+const gameOverLayer = document.querySelector('.game');
 
+
+// Audio
+const audio = document.querySelector('#audio');
+const audioLose = document.querySelector('#audioLose');
+
+
+
+
+// Start Button
+buttonStart.onclick = function (){
+    console.log("test");
+    initialScore.remove();
+    cactus.classList.add('cactus-move');
+    window.setInterval(stopWatch, 100);
+
+
+};
+
+// Dino Jump
 function jump() {
 
     if (dino.classList != "jump"){
@@ -25,11 +48,14 @@ let isAlive = setInterval(() => {
  
     // Detect collision
     if (cactusLeft <50 && cactusLeft > 0 && dinoTop >= 140){
-    // alert ("You lose!");
-    } 
         
-    
+        
+        gameOverLayer.classList.add('game-over');
+        cactus.classList.add('cactus-move-paused');
+        isPaused = true;
 
+        // audioLose.play();
+    }
 
 }, 10);
 
@@ -45,13 +71,17 @@ document.addEventListener('keydown', function(e) {
 // Score
 const score = document.querySelector('.score');
 let seconds = 0;
+let isPaused = false;
 
 function stopWatch(){
+    if(!isPaused) {
+
     let finalScore = seconds++;
     score.innerHTML = `<h2>Score: ${finalScore} </h2>`;
+    }
 }
 
-window.setInterval(stopWatch, 100);
+
 
 
 
