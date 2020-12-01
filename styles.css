@@ -6,12 +6,22 @@ body {
   font-size: 0.8em;
 }
 
+.header {
+  padding-top: 56px;
+}
+
 h1 {
   font-weight: 600;
   font-size: 32pt;
   color: #2362ee;
   text-align: center;
-  padding: 56px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 20pt;
+  color: white;
+  text-align: center;
 }
 
 .game {
@@ -63,5 +73,27 @@ h1 {
 
   100% {
     top: 150px;
+  }
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  background-image: url(img/cactus.svg);
+  background-size: 20px 40px;
+
+  animation: block 1s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 620px;
+  }
+
+  100% {
+    left: -40px;
   }
 }
