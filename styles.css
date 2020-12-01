@@ -8,7 +8,8 @@ body {
 }
 
 .header {
-  padding-top: 56px;
+  margin-top: 15vh;
+  height: 20vh;
 }
 
 h1 {
@@ -43,6 +44,12 @@ h2 {
 
 .game-over {
   background: #7b59f4;
+  font-size: 24pt;
+  font-weight: 600;
+  color: white;
+  padding-top: 70px;
+  height: 130px;
+  transition: all 0.2s ease-out;
 }
 
 #game-over {
@@ -58,9 +65,13 @@ h2 {
   width: 50px;
   background-image: url(img/dino.svg);
   background-size: 50px 50px;
-
   position: relative;
   top: 150px;
+}
+
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
 
 .jump {
@@ -86,6 +97,42 @@ h2 {
 
   100% {
     top: 150px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 0px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, 0px) rotate(0deg);
+  }
+  20% {
+    transform: translate(-1px, 0px) rotate(0deg);
+  }
+  30% {
+    transform: translate(1px, 0px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-1px, 0px) rotate(0deg);
+  }
+  60% {
+    transform: translate(-1px, 0px) rotate(0deg);
+  }
+  70% {
+    transform: translate(1px, 0px) rotate(0deg);
+  }
+  80% {
+    transform: translate(-1px, 0px) rotate(0deg);
+  }
+  90% {
+    transform: translate(1px, 0px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, 0px) rotate(0deg);
   }
 }
 

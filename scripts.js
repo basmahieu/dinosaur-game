@@ -1,5 +1,5 @@
 const dino = document.querySelector('#dino');
-
+ 
 const cactus = document.querySelector('#cactus');
 
 const buttonStart = document.querySelector('#start');
@@ -9,16 +9,16 @@ const initialScore = document.querySelector('.initial-score');
 const gameOver = document.querySelector('#game-over');
 const gameOverLayer = document.querySelector('.game');
 
-
-// Audio
 const audio = document.querySelector('#audio');
 const audioLose = document.querySelector('#audioLose');
 
 
+
 // Start Button
-buttonStart.onclick = function (){
+const start = buttonStart.onclick = function (){
     initialScore.remove();
     cactus.classList.add('cactus-move');
+    dino.classList.add('shake');
     window.setInterval(stopWatch, 100);
     buttonStart.remove();
     
@@ -34,8 +34,8 @@ buttonRestart.onclick = function (){
 document.addEventListener('keydown', function(e) {
     if(e.keyCode == 32){
         jump();
+        start();
     }
-    
 });
 
 
@@ -65,6 +65,8 @@ let isAlive = setInterval(() => {
         
         
         gameOverLayer.classList.add('game-over');
+        gameOverLayer.innerText = "Game over!";
+
         cactus.classList.add('cactus-move-paused');
         isPaused = true;
 
@@ -83,10 +85,10 @@ let seconds = 0;
 let isPaused = false;
 
 function stopWatch(){
+    
     if(!isPaused) {
-
-    let finalScore = seconds++;
-    score.innerHTML = `<h2>Score: ${finalScore} </h2>`;
+        let finalScore = seconds++;
+        score.innerHTML = `<h2>Score: ${finalScore} </h2>`;
     }
 }
 
