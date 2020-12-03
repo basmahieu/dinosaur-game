@@ -1,6 +1,6 @@
-const dino = document.querySelector('#dino');
+const dino = document.querySelector('.dino');
  
-const cactus = document.querySelector('#cactus');
+const cactus = document.querySelector('.cactus');
 
 const buttonStart = document.querySelector('#start');
 const buttonRestart = document.querySelector('#restart');
@@ -38,6 +38,23 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+// Duck with space
+document.addEventListener('keydown', function(e) {
+    if(e.keyCode == 40){
+        duck();
+     
+    }
+});
+
+document.addEventListener('keyup', function(e) {
+    if(e.keyCode == 40){
+    
+    dino.classList.remove('dino-duck');
+    dino.classList.add('dino');
+     
+    }
+});
+
 
 // Dino Jump
 function jump() {
@@ -51,6 +68,13 @@ function jump() {
         }, 300)
     }
 }   
+
+
+function duck() {
+    dino.classList.remove('dino');
+    dino.classList.add('dino-duck');
+}   
+
 
 // Check collision
 let isAlive = setInterval(() => {
@@ -70,7 +94,7 @@ let isAlive = setInterval(() => {
         cactus.classList.add('cactus-move-paused');
         isPaused = true;
 
-        // audioLose.play();
+        audioLose.play();
     }
 
 }, 10);
