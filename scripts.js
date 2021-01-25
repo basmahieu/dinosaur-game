@@ -24,7 +24,7 @@ const start = buttonStart.onclick = function (){
     window.setInterval(stopWatch, 100);
     buttonStart.remove();
     backgroundpause.classList.remove('background-move-paused');
-
+    return true;
     
 };
 
@@ -40,6 +40,14 @@ document.addEventListener('keydown', function(e) {
       }
 });
 
+document.addEventListener("click", function() {
+    
+    if (start() === true){
+        console.log("jump");
+        jump();
+    }
+    
+  });
 
 // Jump with space
 document.addEventListener('keydown', function(e) {
