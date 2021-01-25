@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="403" height="432" viewBox="0 0 403 432">
+  <g id="Group_14" data-name="Group 14" transform="translate(-906 -264)">
+    <path id="Exclusion_9" data-name="Exclusion 9" d="M176,96H0V16H16V0H160V16h16V96ZM35,24V48H59V24Z" transform="translate(1133 264)" fill="#fff"/>
+    <path id="Path_9" data-name="Path 9" d="M0,0H112V16H0Z" transform="translate(1149 384)" fill="#fff"/>
+    <rect id="Rectangle_364" data-name="Rectangle 364" width="88" height="48" transform="translate(1133 352)" fill="#fff"/>
+    <rect id="Rectangle_365" data-name="Rectangle 365" width="72" height="128" transform="translate(1133 392)" fill="#fff"/>
+    <rect id="Rectangle_366" data-name="Rectangle 366" width="72" height="16" transform="translate(1165 440)" fill="#fff"/>
+    <rect id="Rectangle_367" data-name="Rectangle 367" width="16" height="24" transform="translate(1221 424)" fill="#fff"/>
+    <rect id="Rectangle_368" data-name="Rectangle 368" width="72" height="144" transform="translate(1109 400)" fill="#fff"/>
+    <rect id="Rectangle_369" data-name="Rectangle 369" width="80" height="136" transform="translate(1085 424)" fill="#fff"/>
+    <rect id="Rectangle_370" data-name="Rectangle 370" width="80" height="136" transform="translate(1061 440)" fill="#fff"/>
+    <rect id="Rectangle_371" data-name="Rectangle 371" width="80" height="120" transform="translate(1037 456)" fill="#fff"/>
+    <rect id="Rectangle_372" data-name="Rectangle 372" width="80" height="96" transform="translate(1021 480)" fill="#fff"/>
+    <rect id="Rectangle_373" data-name="Rectangle 373" width="80" height="88" transform="translate(1005 480)" fill="#fff"/>
+    <rect id="Rectangle_374" data-name="Rectangle 374" width="56" height="88" transform="translate(1037 512)" fill="#fff"/>
+    <rect id="Rectangle_375" data-name="Rectangle 375" width="32" height="88" transform="translate(1037 528)" fill="#fff"/>
+    <rect id="Rectangle_376" data-name="Rectangle 376" width="16" height="88" transform="translate(1037 568)" fill="#fff"/>
+    <rect id="Rectangle_377" data-name="Rectangle 377" width="16" height="88" transform="translate(1145 536)" fill="#fff"/>
+    <rect id="Rectangle_378" data-name="Rectangle 378" width="24" height="16" transform="translate(1053 640)" fill="#fff"/>
+    <rect id="Rectangle_379" data-name="Rectangle 379" width="24" height="16" transform="translate(1161 608)" fill="#fff"/>
+    <rect id="Rectangle_380" data-name="Rectangle 380" width="32" height="88" transform="translate(1117 512)" fill="#fff"/>
+    <rect id="Rectangle_381" data-name="Rectangle 381" width="117" height="72" transform="translate(952 448)" fill="#fff"/>
+    <rect id="Rectangle_390" data-name="Rectangle 390" width="117" height="72" transform="translate(976 472)" fill="#fff"/>
+    <rect id="Rectangle_382" data-name="Rectangle 382" width="32" height="72" transform="translate(922 420)" fill="#fff"/>
+    <rect id="Rectangle_383" data-name="Rectangle 383" width="32" height="64" transform="translate(906 392)" fill="#fff"/>
+    <rect id="Rectangle_384" data-name="Rectangle 384" width="16" height="104" transform="translate(906 352)" fill="#fff"/>
+    <g id="Group_10" data-name="Group 10" transform="translate(945 628.159)">
+      <rect id="Rectangle_386" data-name="Rectangle 386" width="244" height="16" transform="translate(32 27.841)" fill="#fff"/>
+      <rect id="Rectangle_387" data-name="Rectangle 387" width="46" height="16" transform="translate(11.314 0) rotate(45)" fill="#fff"/>
+      <rect id="Rectangle_388" data-name="Rectangle 388" width="46" height="16" transform="translate(307.841 11.314) rotate(135)" fill="#fff"/>
+      <circle id="Ellipse_12" data-name="Ellipse 12" cx="12" cy="12" r="12" transform="translate(56 43.841)" fill="#fff"/>
+      <circle id="Ellipse_13" data-name="Ellipse 13" cx="12" cy="12" r="12" transform="translate(224 43.841)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

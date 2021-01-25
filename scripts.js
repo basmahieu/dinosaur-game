@@ -5,6 +5,8 @@ const cactus = document.querySelector('.cactus');
 const buttonStart = document.querySelector('#start');
 const buttonRestart = document.querySelector('#restart');
 
+const backgroundpause = document.querySelector('.background-move-paused');
+
 const initialScore = document.querySelector('.initial-score');
 const gameOver = document.querySelector('#game-over');
 const gameOverLayer = document.querySelector('.game');
@@ -21,13 +23,22 @@ const start = buttonStart.onclick = function (){
     dino.classList.add('shake');
     window.setInterval(stopWatch, 100);
     buttonStart.remove();
+    backgroundpause.classList.remove('background-move-paused');
+
     
 };
 
 // Restart Button
-buttonRestart.onclick = function (){
+const restart = buttonRestart.onclick = function (){
     location.reload();
 };
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        // code for enter
+        restart();
+      }
+});
 
 
 // Jump with space
@@ -38,7 +49,8 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Duck with space
+
+// Duck with arrow
 document.addEventListener('keydown', function(e) {
     if(e.keyCode == 40){
         duck();
@@ -61,10 +73,14 @@ function jump() {
 
     if (dino.classList != "jump"){
         dino.classList.add('jump');
+        dino.classList.add('dino-jump');
+
         audio.play();   
 
         setTimeout(function(){
             dino.classList.remove('jump');
+            dino.classList.remove('dino-jump');
+
         }, 300)
     }
 }   
@@ -84,8 +100,10 @@ let isAlive = setInterval(() => {
     // get current cactus X position
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
  
+    
+
     // Detect collision
-    if (cactusLeft <50 && cactusLeft > 0 && dinoTop >= 140){
+    if (cactusLeft <50 && cactusLeft > 0 && dinoTop >= 130){
         
         
         gameOverLayer.classList.add('game-over');
@@ -98,6 +116,7 @@ let isAlive = setInterval(() => {
     }
 
 }, 10);
+
 
 
 
